@@ -14,7 +14,7 @@ class App < Sinatra::Base
 
     post '/checkout' do
       sessions[:item] = params[:item]
-      @cart = params[:item]
+      @cart = sessions[:item]
       erb :cart
     end
 
